@@ -1,3 +1,4 @@
+import os
 import time
 
 from splinter import Browser
@@ -58,3 +59,7 @@ class WsSimulation():
                 self.browser.evaluate_script("ToRaid.perform('{}');".format(code))
         except Exception as e:
             print(e)
+
+    def get_image(self):
+        screenshot_path = self.browser.screenshot(os.getcwd()+'/absolute_path/{}.png'.format(self.playername), full=True)
+        return screenshot_path
