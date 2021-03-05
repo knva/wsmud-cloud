@@ -23,3 +23,40 @@ python main.py
 ## 关于chrome浏览器驱动
 
 https://splinter.readthedocs.io/en/latest/drivers/chrome.html
+
+
+## http api
+---
+
+/login  [post]
+
+username 账号
+
+password 密码
+
+area 区
+
+pname 角色名
+
+返回 
+成功/失败
+
+---
+
+/getimg [GET] 
+
+pname 角色名
+
+
+返回网页图片
+
+
+---
+
+/exec [POST]
+
+pname 角色名
+
+exex 流程代码
+
+ctype ws或者raid  ws为原生指令 raid为raidjs
